@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "nx exec -- next dev",
+    "build": "nx exec -- next build",
+    "start": "nx exec -- next start",
+    "lint": "nx exec -- next lint"
   },
   "dependencies": {
     "@material-ui/core": "^4.12.3",
@@ -18,6 +18,32 @@
   },
   "devDependencies": {
     "eslint": "7.32.0",
-    "eslint-config-next": "11.1.2"
+    "eslint-config-next": "11.1.2",
+    "nx": "15.6.3",
+    "@nrwl/nx-cloud": "latest"
+  },
+  "nx": {
+    "targets": {
+      "dev": {
+        "outputs": [
+          "{projectRoot}/y"
+        ]
+      },
+      "build": {
+        "outputs": [
+          "{projectRoot}/y"
+        ]
+      },
+      "start": {
+        "outputs": [
+          "{projectRoot}/y"
+        ]
+      },
+      "lint": {
+        "outputs": [
+          "{projectRoot}/y"
+        ]
+      }
+    }
   }
 }
